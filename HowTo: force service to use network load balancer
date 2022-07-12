@@ -1,2 +1,3 @@
 As we all know, AWS will retire classic load balancer on Mid of Augest of 2022.
 And Most of the K8s service is using Clb by default, now brings the question, how to switch to NLB or ALB?
+Of course, you can just read through this document: https://docs.aws.amazon.com/eks/latest/userguide/network-load-balancing.html
