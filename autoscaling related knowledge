@@ -1,0 +1,2 @@
+Every type of node of ec2 has pods limitation: https://github.com/awslabs/amazon-eks-ami/blob/master/files/eni-max-pods.txt
+But you can do a optimzie for pods number in a caculator 
