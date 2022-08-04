@@ -1,2 +1,7 @@
 Every type of node of ec2 has pods limitation: https://github.com/awslabs/amazon-eks-ami/blob/master/files/eni-max-pods.txt
 But you can do a optimzie for pods number in a caculator 
+
+cni is in charge of assigning new ip to new pods, but there are no new ip in subnets, the ip assignment issue shall be solved easily by adding new subnets which I created(cause c5.xlarge shall support 4 ENI x 15 addresses),  my plan is :
+1. pick a time to recreate sandbox cluster with 6 private subnet in total (Amazon EKS VPC and subnet requirements and considerations - Amazon EKS  does not indicate the limitation of subnets) 
+2. for better understanding, I can install metrics helper for available ip monitoring Metrics helper - Amazon EKS   
+3. spin up 100~ test pods like nginx for testing
