@@ -1,0 +1,28 @@
+VM do not make the best of space, apps are not isolated which could cause conflicts
+
+a unique component are pods
+a pod: is a gourp of more  containers with shared storage, network resources and other
+
+cluster: a logical grouping of all copoments
+namespace: a named logical grouping of k8s components within cluster  used to isolate different workloads on the same cluster
+node: a vm or underlying server: control plane and worker nodes
+service: a static ip address and DNS name for ste of pods(persists an address even if a pod dies) and a LB,
+ingress: translates http/s rules to point to services
+API server: allows users to interace with k8s using kubectl or by sending http requests
+kubelet: agent installed on all nodes, allow users to interact with node through API
+control manager: control loop that watches the state of the cluster and will change the current state back to desired state
+scheduler: determines where to place pods on nodes places them in scheduling a queue
+kube proxy: an app on worker nodes provides routing and filtering rules for ingress traffic to pods
+network policy: act as firewall as namespace or pod-level
+configmap: env-specific configuration from your container images, 
+secret: sensitive data such as password, token, or key
+volumes: mounting storage.
+statefluSet: provides gurantess about ordering and uniquenes of these pods
+replicaSets: maintain a stable set of relica pods running. provide availablity
+deployemt: blueprint for a pod
+
+Manifest: a file a doc that is commonly used forcustoms to list the contents of cargo, or passengers
+a manifest files is a generalized name for any k8s conf file
+:deployemt file
+podSpec file
+network policy file
